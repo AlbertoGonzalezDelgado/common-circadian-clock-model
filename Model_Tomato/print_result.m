@@ -15,19 +15,6 @@ opts = detectImportOptions(clock_file, 'Delimiter', ';', 'FileType', 'text');
 cic_data = readtable(clock_file, opts);
 %merge data
 exp = innerjoin(data, cic_data(:, {'ID', 'Abbreviation'}), 'Keys', 'ID');
-
-% Obtain gene exp ----------------------------------------------------
-%LD
-variables = {'CO', 'GI', 'TOC1', 'LHY', 'SP5G','PRR5','CDF3'};
-names = {'CO', 'GI', 'TOC1', 'LHY', 'Rep','PRR5','CDF3'};
-data = struct();
-
-for i = 1:length(variables)
-    temp = table2array(exp(contains(exp.Abbreviation, variables{i}), 2:134));
-    temp_normalized = (temp - min(temp)) / (max(temp) - min(temp));
-
-    data.(names{i}) = temp_normalized;
-end
         %1: aCO
         %2: kaCO
         %3: aGI
@@ -57,7 +44,7 @@ end
 disp("p")
 p=[7.9682, 0.1088, 4.9738, 0.1115, 0.1229, 0.9929, 0.1533, 0.9470, 0.1289, 1.0599, 0.4584, 0.5154];
 disp(p)
-Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,93,p(9),p(10),data.PRR5,3,data.CDF3,p(11),p(12));
+Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,89,p(9),p(10),data.PRR5,3,data.CDF3,p(11),p(12));
 subplot(2,1,1)
 plot(data.Rep, 'r')  
 hold on
