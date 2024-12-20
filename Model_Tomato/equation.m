@@ -10,7 +10,11 @@ n=3;
 b=0;
 d=0.05;
 %Activation term CO
-ACO=aCO*((kaCO*CO(t)).^n);
+if t >= night
+    ACO = 0;
+else
+    ACO=aCO*((kaCO*CO(t)).^n);
+end
 
 %Activation term GI
 AGI=aGI*((kaGI*GI(t)).^n);
