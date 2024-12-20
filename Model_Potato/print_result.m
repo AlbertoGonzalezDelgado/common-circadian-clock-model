@@ -40,7 +40,7 @@ end
     
 p=[5.6754, 0.1719, 1.3064, 0.1630, 0.3121, 2.0323, 0.4472, 2.9115, 0.1999, 2.3042, 0.5403, 0.4380];
 %Plot model --------------------------------------------------------------
-Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,69,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
+Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,72,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
 
 str = sprintf('%.4f, ', p); 
 str = str(1:end-2); 
