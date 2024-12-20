@@ -35,13 +35,13 @@ P = zeros(num_steps, 13);
 Costs = zeros(num_steps, 1);
 
 x0=[8,0.1,5,0.1,0.1,1,0.1,1,0.1,1,0.5,0.5];
-[p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.Rep,x0,16,data.PRR5,data.CDF3);
+[p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.Rep,x0,89,data.PRR5,data.CDF3);
 disp(cost)
 
 
 % Find miniumum cost
 
-Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,93,p(9),p(10),data.PRR5,3,data.CDF3,p(11),p(12));
+Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,89,p(9),p(10),data.PRR5,3,data.CDF3,p(11),p(12));
 
 %Plot model --------------------------------------------------------------
 %LD
