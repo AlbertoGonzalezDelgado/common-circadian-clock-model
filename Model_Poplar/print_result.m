@@ -44,7 +44,7 @@ p=[ 2.8736  ,  0.1021   , 1.7656    ,0.3792  , 1.5689  ,  1.5590  ,  1.0859,    
 
 disp("p")
 disp(p)
-FT_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.FT,93,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
+FT_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.FT,72,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
 writematrix(data.FT, 'FT_LD.tsv', 'Delimiter', '\t', 'FileType', 'text');
 writematrix(FT_sim, 'FT_simulated_LD.tsv', 'Delimiter', '\t', 'FileType', 'text');
 subplot(2,1,1)
@@ -69,7 +69,7 @@ for i = 1:length(variables)
 end
 p=[ 2.8736  ,  0.1021   , 1.7656    ,0.3792  , 1.5689  ,  1.5590  ,  1.0859,    3.2218  ,  0.4593  ,  1.8292    ,4.0146  ,  4.7674];
 
-FT_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.FT,93,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
+FT_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.FT,46,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
 subplot(2,1,2)
 writematrix(data.FT, 'FT_ND.tsv', 'Delimiter', '\t', 'FileType', 'text');
 writematrix(FT_sim, 'FT_simulated_ND.tsv', 'Delimiter', '\t', 'FileType', 'text');
