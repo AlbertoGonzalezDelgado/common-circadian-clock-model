@@ -36,7 +36,7 @@ x0=[6,0.2,... %CO
 [p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.Rep,x0,16,data.PRR5,data.CDF);
  %Save results
 %Plot model --------------------------------------------------------------
-Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,69,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
+Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,72,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
 
 str = sprintf('%.4f, ', p); 
 str = str(1:end-2); 
