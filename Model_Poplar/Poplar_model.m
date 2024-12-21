@@ -40,7 +40,7 @@ end
     
 
 x0=[3.0693, 0.1000, 1.8252, 0.2979, 1.0092, 1.7348, 0.5209, 3.0386, 0.5485, 0.7727, 0.0753, 0.0793];
-[p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.FT,x0,16,data.PRR5,data.CDF);
+[p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.FT,x0,72,data.PRR5,data.CDF);
 disp(p)
 Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.FT,72,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
 plot(data.FT, 'r')  
