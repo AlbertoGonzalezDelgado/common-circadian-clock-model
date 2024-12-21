@@ -45,9 +45,9 @@ x0=[4,0.1,... %CO
    0.5,0.1,... %TOC1
     0.5,3,... % LHY
     0.5,0.5,... %PRR5
-    0.1,0.1]; %CDF 
+    0.1,0.2]; %CDF 
 
-[p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.FT,x0,16,data.PRR5,data.CDF);
+[p,cost] = optimization(exp,data.CO,data.GI,data.TOC1,data.LHY,data.FT,x0,72,data.PRR5,data.CDF);
  %Save results
 %Plot model --------------------------------------------------------------
 Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.FT,72,p(9),p(10),data.PRR5,3,data.CDF,p(11),p(12));
