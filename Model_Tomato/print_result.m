@@ -42,7 +42,7 @@ for i = 1:length(variables)
     data.(names{i}) = temp_normalized;
 end
 disp("p")
-p=[7.9682, 0.1088, 4.9738, 0.1115, 0.1229, 0.9929, 0.1533, 0.9470, 0.1289, 1.0599, 0.4584, 0.5154];
+p=[  7.9689   , 0.1089   , 4.9744   , 0.1116  ,  0.1224  ,  0.9898    ,0.1518   , 0.9473    ,0.1307    ,1.0572   , 0.4625  ,  0.5158];
 disp(p)
 Rep_sim= model(p(1),p(2),data.CO,p(3),p(4),data.GI,p(5),p(6),data.TOC1,p(7),p(8),data.LHY,0,0.05,data.Rep,89,p(9),p(10),data.PRR5,3,data.CDF3,p(11),p(12));
 subplot(2,1,1)
@@ -60,7 +60,7 @@ set(gca, 'XTickLabel', x_labels);
 %SD
 variables = {'CO', 'GI', 'TOC1', 'LHY', 'SP5G','PRR5','CDF3'};
 data = struct();
-p=[7.9682, 0.1088, 4.9738, 0.1115, 0.1229, 0.9929, 0.1533, 0.9470, 0.1289, 1.0599, 4.4584, 4.5154];
+p=[  7.9689   , 0.1089   , 4.9744   , 0.1116  ,  0.1224  ,  0.9898    ,0.1518   , 0.9473    ,0.1307    ,1.0572   , 4.4625  ,  4.5158];
 
 for i = 1:length(variables)
     temp = table2array(exp(contains(exp.Abbreviation, variables{i}), 268:400));
